@@ -1,0 +1,32 @@
+
+Composite Pattern = Organization of Objects
+
+			Component------------                
+				^				|					
+	 Inheritance|		Loop	|
+				|				|
+			---------			|
+			|		|			|Association
+			|		|			|
+			Leaf	Composite----
+			
+	* The Inheritance captures the commonality between the Leaf and The Composite.
+	* The Association allows the organization of Objects.
+	
+	* Example:
+	
+			Expression-------------------               
+				^						|				
+	 Inheritance|				Loop	|
+				|						|
+		-------------					|
+		|			|					|Association
+		|			|					|
+		Constant	BinaryExpression-----
+						^							
+			 Inheritance|				
+						|
+						Adder
+						Subtracter
+						Multiplier
+						Divider
