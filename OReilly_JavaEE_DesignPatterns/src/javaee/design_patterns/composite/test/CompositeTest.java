@@ -1,10 +1,15 @@
 package javaee.design_patterns.composite.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import javaee.design_patterns.composite.*;
+import javaee.design_patterns.composite.Adder;
+import javaee.design_patterns.composite.Constant;
+import javaee.design_patterns.composite.Divider;
+import javaee.design_patterns.composite.Expression;
+import javaee.design_patterns.composite.Multiplier;
+import javaee.design_patterns.composite.Subtracter;
 
 public class CompositeTest {
 
