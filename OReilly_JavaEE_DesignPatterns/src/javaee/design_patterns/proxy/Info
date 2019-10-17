@@ -1,0 +1,15 @@
+
+			Proxy Pattern
+
+					HAS A
+			Client------------> Subject
+								getData():Data             
+									^									
+						 	   IS A |		
+									|				
+							---------------------		
+							|					|			
+							|			HAS A	|			
+							RemoteProxy-------->RealSubject
+							getData():Data		getData():Data
+	
