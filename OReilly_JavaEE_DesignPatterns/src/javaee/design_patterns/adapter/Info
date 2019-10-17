@@ -1,0 +1,39 @@
+
+			Adapter Pattern
+
+					HAS A
+			Client------------> Subject
+								getData():Data   						
+								create():Subject  (Factory Method)        
+									^									
+						 	   IS A |		
+									|									NewNonSubject 																					
+							---------------------						getNewData():Data	
+							|					|							^
+							|					|					HAS A	|
+							OldSubjectImpl 		SubjectAdapter---------------
+							getData():Data		getData():Data
+		
+		* Similar to Proxy, but the NewNonSubject does not implement the Subject Interface 
+		* This is good when we have a mismatch of interfaces
+		* The Adapter translates between interfaces
+		* Example:
+	
+			HAS A
+	Main--------------> Logger
+						void debug(String message);
+						void trace(String message);
+						void error(String message);
+						create():Logger  (Factory Method)        		org.apache.commons.logging.impl.SimpleLog
+							^													void debug(String message);	
+				 	   IS A |													void trace(String message);	
+							|													void error(String message);			
+					---------------------------------											^
+					|								|											|
+					|								|									HAS A	|
+					OldLoggerImpl 					ApacheCommonsSimpleLogAdapter----------------
+					void debug(String message);		void debug(String message);
+					void trace(String message);		void trace(String message);
+					void error(String message);		void error(String message);
+					
+					
