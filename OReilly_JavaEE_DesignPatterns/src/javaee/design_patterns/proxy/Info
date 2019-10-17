@@ -3,7 +3,8 @@
 
 					HAS A
 			Client------------> Subject
-								getData():Data             
+								getData():Data   
+								create():Subject  (Factory Method)        
 									^									
 						 	   IS A |		
 									|				
