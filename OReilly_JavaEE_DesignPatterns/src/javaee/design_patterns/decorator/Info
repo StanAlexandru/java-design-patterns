@@ -1,0 +1,24 @@
+
+		Decorator Pattern = Extend Objects at runtime dynamically, and added functionality can be also revoked
+
+			GraphicalComponent<>-----                
+			paint()					|
+				^					| component					
+	 			|					|
+				|					|
+			-------------			|
+			|			|			|
+			|			|			|
+			TextField	Decorator----   		MUST CALL component.paint()
+			paint()		paint()-------------------component.paint()
+							^								
+				 			|					
+							|					
+					---------------------------------			
+		 			|								|	
+					|								|
+					ScrollBarDecorator				BorderDecorator
+					scrollAmount					borderWidth 			MUST CALL super.paint()
+			        paint()-------------------------paint()-------------------super.paint()
+					scroll()						paintBorder()
+					
