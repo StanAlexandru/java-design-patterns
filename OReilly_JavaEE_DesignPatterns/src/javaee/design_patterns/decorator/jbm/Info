@@ -1,0 +1,30 @@
+
+		Decorator Pattern = Extend Objects at runtime dynamically, and added functionality can be also revoked
+
+	GraphicalComponent<>---------------------
+	paint():void							|
+	addContent:	GraphicalComponent			|
+		^									| decoratedComponent					
+		|									|
+		|									|
+	-------------------------------------	|
+	|									|	|					
+	|									|	|			
+	TextField							GraphicalComponentDecorator
+	paint()								paint()
+	addContent:	GraphicalComponent		addContent:	GraphicalComponent	
+											^								
+								 			|					
+											|					
+										---------------------------------			
+										|								|	
+										|								|
+										ScrollBarDecorator				BorderDecorator
+										paint()							paint()			
+										addContent:	GraphicalComponent	
+										
+* Any class that extends GraphicalComponentDecorator can chose 
+if they want to override paint and addContent methods.
+
+* TextField class is made final any update on it's methods it 's performed using decorators.
+	
