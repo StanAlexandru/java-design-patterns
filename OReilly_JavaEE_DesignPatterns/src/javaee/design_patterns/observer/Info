@@ -1,0 +1,25 @@
+
+		Observer Pattern
+
+	Subject ----------------------------------------------> Observer
+	add(o:Observer):void									^
+	remove(o:Observer):void									|
+	notifyObservers(){										|
+		observers.foreach(o -> o.update);					|
+	}														|
+		^													| 						
+		|													|
+		|													|
+		|													|	
+		|													|
+		ConcreteSubject										ConcreteObserever
+		subjectState										observerState
+		getState(){											update(){
+			return subjectState;								...
+		}														subject.getState();
+																...
+															}	
+								 			
+										
+
+	
